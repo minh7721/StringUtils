@@ -5,7 +5,6 @@ require_once __DIR__."/vendor/autoload.php";
 
 $string_utils = new StringUtils();
 
-
 // Hàm normalize để chuyển tất cả thành chữ thường và xóa hết các ký tự đặc biệt
 //// Tiếng việt
 //echo $string_utils->normalize("Làm gì để có người yêu đi chơi trung thu?")."\n";
@@ -185,4 +184,6 @@ $string_utils = new StringUtils();
 //
 // Tiếng Nhật Bản
 //dd($string_utils->extractUniqueWords("恋人が中秋節に行くにはどうすればいいですか？"));
+
+
 

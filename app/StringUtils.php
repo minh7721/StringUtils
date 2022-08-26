@@ -118,12 +118,12 @@ class StringUtils
         };
     }
 
-    public function extractEmails()
+    public static function extractEmails()
     {
 
     }
 
-    public function extractPhones()
+    public static function extractPhones()
     {
 
     }
