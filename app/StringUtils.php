@@ -118,14 +118,22 @@ class StringUtils
         };
     }
 
-    public static function extractEmails()
+    public static function extractEmails($string)
     {
-
+        $pattern = '/[a-z0-9_\-\+\.]+@[a-z0-9\-]+\.([a-z]{2,4})(?:\.[a-z]{2})?/i';
+        preg_match_all($pattern, $string, $matches);
+        return $matches[0];
     }
 
-    public static function extractPhones()
-    {
 
+    public static function extractPhones($string)
+    {
+        $matches = array();
+
+// returns all results in array $matches
+        preg_match_all('/[0-9]{9}|[0-9]{10}/', $string, $matches);
+//        $matches = $matches[0];
+        return $matches[0];
     }
 
     public static function trim($str)
